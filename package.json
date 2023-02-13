@@ -1,0 +1,23 @@
+{
+  "name": "appsync-with-cognito",
+  "version": "1.0.0",
+  "description": "---\r - Understanding AWS Cognito\r - Using Cognito with AWS Appsync",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdithyaBNayak/appsync-with-cognito.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdithyaBNayak/appsync-with-cognito/issues"
+  },
+  "homepage": "https://github.com/AdithyaBNayak/appsync-with-cognito#readme",
+  "devDependencies": {
+    "serverless-appsync-plugin": "^1.14.0"
+  }
+}
