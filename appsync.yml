@@ -14,7 +14,10 @@ mappingTemplates:
     field: getBookById
   - dataSource: bookTable
     type: Mutation
-    field: createBook   
+    field: createBook
+  - dataSource: bookTable
+    type: Query
+    field: listBooks   
 
 dataSources:
   - type: NONE

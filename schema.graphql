@@ -14,7 +14,7 @@ type Mutation {
     createOrder(newOrder: OrderInput!): Boolean!
 }
 
-type Book {
+type Book @aws_iam @aws_cognito_user_pools{
     bookId: ID!
     title: String!
     description: String 
