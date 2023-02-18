@@ -1,0 +1,25 @@
+name: bookStoreApi
+authenticationType: AMAZON_COGNITO_USER_POOLS
+schema:
+  - schema.graphql
+userPoolConfig:
+  awsRegion: ${self:provider.region}
+  defaultAction: ALLOW
+  userPoolId: !Ref MyUserPool
+
+mappingTemplatesLocation: mapping-templates
+mappingTemplates:
+  - dataSource: bookTable
+    type: Query
+    field: getBookById
+  - dataSource: bookTable
+    type: Mutation
+    field: createBook   
+
+dataSources:
+  - type: NONE
+    name: none
+  - type: AMAZON_DYNAMODB
+    name: bookTable
+    config:
+      tableName: { Ref: BooksTable } 

@@ -1,11 +1,19 @@
 service: appsync-with-cognito
 frameworkVersion: '2'
 
+plugins:
+  - serverless-appsync-plugin
+
+custom:
+  appSync:
+      ${file(appsync.yml)}
+
 provider:
   name: aws
   runtime: python3.8
   lambdaHashingVersion: 20201221
   stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
 
 functions:
   hello:
